@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Crafty Boxes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: rgb(55 65 81);
+            border-radius: 0.375rem;
+            transition-property: color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .nav-link:hover {
+            color: rgb(22 163 74);
+        }
+        .nav-link.active {
+            color: rgb(21 128 61);
+            font-weight: 600;
+        }
+        .primary-btn {
+            background-color: #22c55e; /* green-500 */
+            color: white;
+            font-weight: 600;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .primary-btn:hover {
+            background-color: #16a34a; /* green-600 */
+            transform: translateY(-2px);
+        }
+        .secondary-btn {
+            background-color: #f472b6; /* pink-400 */
+            color: white;
+            font-weight: 600;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .secondary-btn:hover {
+            background-color: #ec4899; /* pink-500 */
+            transform: translateY(-2px);
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="./index.html" class="text-2xl font-bold text-green-600">CraftyBoxes</a>
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link">Shop</a>
+                <a href="./about.html" class="nav-link">About Us</a>
+                <a href="./testimonials.html" class="nav-link">Testimonials</a>
+                <a href="./faq.html" class="nav-link">FAQ</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="./cart.html" class="relative text-gray-700 hover:text-green-600">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                </a>
+                 <a href="#" class="hidden md:block text-gray-700 hover:text-green-600">
+                    <i data-lucide="user"></i>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="./index.html" class="block nav-link text-center border-b">Home</a>
+            <a href="./shop.html" class="block nav-link text-center border-b">Shop</a>
+            <a href="./about.html" class="block nav-link text-center border-b">About Us</a>
+            <a href="./testimonials.html" class="block nav-link text-center border-b">Testimonials</a>
+            <a href="./faq.html" class="block nav-link text-center border-b">FAQ</a>
+            <a href="./contact.html" class="block nav-link text-center border-b">Contact</a>
+            <a href="./myaccount.html" class="block nav-link text-center">My Account</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 md:py-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Your Shopping Cart</h1>
+        <p class="text-gray-600 mt-2 mb-8">Please review the items in your cart below. You can update quantities or remove items before proceeding to checkout.</p>
+        <p>Example of the checkout page: <a href="./checkout.html" class="text-green-600 hover:underline">Checkout</a></p>
+        <br>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Cart Items -->
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                
+                <!-- Cart is not empty -->
+                <div id="cart-items">
+                    <!-- Item 1 -->
+                    <div class="flex flex-col md:flex-row items-center justify-between py-4 border-b">
+                        <div class="flex items-center mb-4 md:mb-0">
+                            <img src="https://placehold.co/100x100/a7f3d0/333333?text=Box" alt="Watercolour Dream Box" class="w-24 h-24 object-cover rounded-md mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg">The Watercolour Dream Box</h3>
+                                <p class="text-gray-600">Size: Large</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center border rounded-md">
+                                <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">-</button>
+                                <input type="number" value="1" class="w-12 text-center border-l border-r">
+                                <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">+</button>
+                            </div>
+                            <p class="font-semibold w-20 text-center">$65.00</p>
+                            <button class="text-gray-500 hover:text-red-600"><i data-lucide="trash-2"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col md:flex-row items-center justify-between py-4">
+                         <div class="flex items-center mb-4 md:mb-0">
+                            <img src="https://placehold.co/100x100/fbcfe8/333333?text=Kit" alt="Pottery Starter Kit" class="w-24 h-24 object-cover rounded-md mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg">The Pottery Starter Kit</h3>
+                                <p class="text-gray-600">Size: Standard</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center border rounded-md">
+                                <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">-</button>
+                                <input type="number" value="1" class="w-12 text-center border-l border-r">
+                                <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">+</button>
+                            </div>
+                            <p class="font-semibold w-20 text-center">$55.00</p>
+                            <button class="text-gray-500 hover:text-red-600"><i data-lucide="trash-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart is empty message -->
+                <div id="cart-empty" class="hidden text-center py-12">
+                    <i data-lucide="shopping-basket" class="mx-auto h-16 w-16 text-gray-400"></i>
+                    <h2 class="mt-4 text-2xl font-semibold text-gray-800">Your cart is empty</h2>
+                    <p class="mt-2 text-gray-600">Looks like you haven't added anything to your cart yet.</p>
+                    <a href="./shop.html" class="primary-btn inline-block mt-6">Continue Shopping</a>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-28">
+                    <h2 class="text-2xl font-bold border-b pb-4 mb-4">Order Summary</h2>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Subtotal</span>
+                            <span class="font-semibold">$120.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Shipping</span>
+                            <span class="font-semibold">$8.00</span>
+                        </div>
+                        <div class="flex justify-between text-xl font-bold border-t pt-4 mt-4">
+                            <span>Total</span>
+                            <span>$128.00</span>
+                        </div>
+                    </div>
+                    <a href="#" class="primary-btn w-full text-center mt-6 block">Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- CTA Section -->
+    <div class="container mx-auto px-6">
+        <section class="text-center bg-green-100 rounded-lg p-8 md:p-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Still Looking for Inspiration?</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Browse our full collection of craft boxes and find your next creative project.</p>
+            <a href="./shop.html" class="secondary-btn inline-block">Explore the Shop</a>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">CraftyBoxes</h3>
+                    <p class="text-gray-400">Your daily dose of creativity, delivered to your door.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="./shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Policies</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="./shipping-policy.html" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="./return-policy.html" class="text-gray-400 hover:text-white">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 CraftyBoxes. All Rights Reserved. A website by Bourgeois Website Development</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // Initialize icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+    </script>
+</body>
+</html>
+

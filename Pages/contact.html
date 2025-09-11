@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Crafty Boxes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: rgb(55 65 81);
+            border-radius: 0.375rem;
+            transition-property: color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .nav-link:hover {
+            color: rgb(22 163 74);
+        }
+        .nav-link.active {
+            color: rgb(21 128 61);
+            font-weight: 600;
+        }
+        .primary-btn {
+            background-color: rgb(34 197 94);
+            color: rgb(255 255 255);
+            font-weight: 600;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .primary-btn:hover {
+            background-color: rgb(22 163 74);
+            transform: translateY(-0.25rem);
+        }
+        .secondary-btn {
+            background-color: rgb(244 114 182);
+            color: rgb(255 255 255);
+            font-weight: 600;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .secondary-btn:hover {
+            background-color: rgb(236 72 153);
+            transform: translateY(-0.25rem);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-green-600">CraftyBoxes</a>
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link">Shop</a>
+                <a href="./about.html" class="nav-link">About Us</a>
+                <a href="./testimonials.html" class="nav-link">Testimonials</a>
+                <a href="./faq.html" class="nav-link">FAQ</a>
+                <a href="./contact.html" class="nav-link active">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="relative text-gray-700 hover:text-green-600">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                 <a href="#" class="hidden md:block text-gray-700 hover:text-green-600">
+                    <i data-lucide="user"></i>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="../index.html" class="block nav-link text-center border-b">Home</a>
+            <a href="./shop.html" class="block nav-link text-center border-b">Shop</a>
+            <a href="./about.html" class="block nav-link text-center border-b">About Us</a>
+            <a href="./testimonials.html" class="block nav-link text-center border-b">Testimonials</a>
+            <a href="./faq.html" class="block nav-link text-center border-b">FAQ</a>
+            <a href="./contact.html" class="block nav-link text-center border-b">Contact</a>
+            <a href="./myaccount.html" class="block nav-link text-center">My Account</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 md:py-12">
+        <div class="text-center mb-16">
+             <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Get In Touch</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">We'd love to hear from you! Send us a message and we'll get back to you as soon as possible.</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Box 1: Contact Form -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                <form action="#" method="POST">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+                        </div>
+                         <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+                        </div>
+                         <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <input type="text" name="subject" id="subject" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full primary-btn">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Box 2: Contact Information -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
+                <div class="space-y-8 mt-6">
+                    <div class="flex items-start space-x-4">
+                        <i data-lucide="map-pin" class="text-green-600 mt-1 h-6 w-6 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">Our Address</h3>
+                            <p class="text-gray-600">123 Crafty Lane<br>Creativity City, USA 12345</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <i data-lucide="mail" class="text-green-600 mt-1 h-6 w-6 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">Email Us</h3>
+                            <p class="text-gray-600 hover:text-green-600"><a href="mailto:hello@craftyboxes.com">hello@craftyboxes.com</a></p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <i data-lucide="phone" class="text-green-600 mt-1 h-6 w-6 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">Call Us</h3>
+                            <p class="text-gray-600 hover:text-green-600"><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Find Us Here</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44584.34182963162!2d-64.81938134179687!3d46.11342670000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ca0b932c02432c9%3A0x7232e08253033b08!2sMoncton%2C%20NB!5e0!3m2!1sen!2sca!4v1662758603456!5m2!1sen!2sca" 
+                    class="w-full"
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">CraftyBoxes</h3>
+                    <p class="text-gray-400">Your daily dose of creativity, delivered to your door.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="./shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Policies</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./PrivacyPolicy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="./ShippingPolicy.html" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="./ReturnPolicy.html" class="text-gray-400 hover:text-white">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 CraftyBoxes. All Rights Reserved. A Website by Bourgeois Website Development</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // Initialize icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+    </script>
+</body>
+</html>

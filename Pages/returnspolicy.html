@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Policy - Crafty Boxes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: rgb(55 65 81);
+            border-radius: 0.375rem;
+            transition-property: color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .nav-link:hover {
+            color: rgb(22 163 74);
+        }
+        .nav-link.active {
+            color: rgb(21 128 61);
+            font-weight: 600;
+        }
+        .prose h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5em;
+            margin-bottom: 1em;
+        }
+        .prose p, .prose li {
+            color: #4a5568;
+        }
+        .prose a {
+            color: #16a34a;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="./index.html" class="text-2xl font-bold text-green-600">CraftyBoxes</a>
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link">Shop</a>
+                <a href="./about.html" class="nav-link">About Us</a>
+                <a href="./testimonials.html" class="nav-link">Testimonials</a>
+                <a href="./faq.html" class="nav-link">FAQ</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="relative text-gray-700 hover:text-green-600">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                 <a href="#" class="hidden md:block text-gray-700 hover:text-green-600">
+                    <i data-lucide="user"></i>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="./index.html" class="block nav-link text-center border-b">Home</a>
+            <a href="./shop.html" class="block nav-link text-center border-b">Shop</a>
+            <a href="./about.html" class="block nav-link text-center border-b">About Us</a>
+            <a href="./testimonials.html" class="block nav-link text-center border-b">Testimonials</a>
+            <a href="./faq.html" class="block nav-link text-center border-b">FAQ</a>
+            <a href="./contact.html" class="block nav-link text-center border-b">Contact</a>
+            <a href="./myaccount.html" class="block nav-link text-center">My Account</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 md:py-12">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <div class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Return Policy</h1>
+                <p class="text-gray-600 mt-2">Last updated: September 9, 2025</p>
+            </div>
+            
+            <article class="prose max-w-none">
+                <p>We want you to be completely satisfied with your purchase. If you have any issues with your craft box, we're here to help.</p>
+                
+                <h2>Returns</h2>
+                <p>You have 30 calendar days to return an item from the date you received it.</p>
+                <p>To be eligible for a return, your item must be unused and in the same condition that you received it. Your item must be in the original packaging. Your item needs to have the receipt or proof of purchase.</p>
+
+                <h2>Refunds</h2>
+                <p>Once we receive your item, we will inspect it and notify you that we have received your returned item. We will immediately notify you on the status of your refund after inspecting the item.</p>
+                <p>If your return is approved, we will initiate a refund to your credit card (or original method of payment). You will receive the credit within a certain amount of days, depending on your card issuer's policies.</p>
+
+                <h2>Shipping</h2>
+                <p>You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.</p>
+
+                <h2>Exchanges</h2>
+                <p>If your box arrives damaged or with missing items, we are happy to exchange it for you. Please contact our customer service team within 7 days of receiving your order to arrange for an exchange. We will cover all shipping costs for damaged or incorrect items.</p>
+
+                <h2>Non-Returnable Items</h2>
+                <p>Certain types of items cannot be returned, like perishable goods, custom products (such as special orders or personalized items), and personal care goods (such as beauty products). Please get in touch if you have questions or concerns about your specific item.</p>
+
+                <h2>Contact Us</h2>
+                <p>If you have any questions on how to return your item to us, <a href="./contact.html">contact us</a>.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">CraftyBoxes</h3>
+                    <p class="text-gray-400">Your daily dose of creativity, delivered to your door.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="./shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Policies</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./PrivacyPolicy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="./Shippingpolicy.html" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="./returnpolicy.html" class="text-gray-400 hover:text-white">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 CraftyBoxes. All Rights Reserved. A website by Bourgeois Website Development</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // Initialize icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+    </script>
+</body>
+</html>

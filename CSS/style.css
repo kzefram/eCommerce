@@ -1,0 +1,21 @@
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .nav-link {
+            @apply px-4 py-2 text-gray-700 hover:text-green-600 rounded-md transition-colors duration-300;
+        }
+        .nav-link.active {
+            @apply text-green-700 font-semibold;
+        }
+        .primary-btn {
+            @apply bg-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1;
+        }
+        .secondary-btn {
+            @apply bg-pink-400 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-pink-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1;
+        }

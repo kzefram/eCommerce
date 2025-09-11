@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pottery Starter Kit - Crafty Boxes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: rgb(55 65 81);
+            border-radius: 0.375rem;
+            transition-property: color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .nav-link:hover {
+            color: rgb(22 163 74);
+        }
+        .nav-link.active {
+            color: rgb(21 128 61);
+            font-weight: 600;
+        }
+        .primary-btn {
+            background-color: #22c55e; /* green-500 */
+            color: white;
+            font-weight: 600;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .primary-btn:hover {
+            background-color: #16a34a; /* green-600 */
+            transform: translateY(-2px);
+        }
+        .secondary-btn {
+            background-color: #f472b6; /* pink-400 */
+            color: white;
+            font-weight: 600;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .secondary-btn:hover {
+            background-color: #ec4899; /* pink-500 */
+            transform: translateY(-2px);
+        }
+        .thumbnail-img {
+            transition: border-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="./index.html" class="text-2xl font-bold text-green-600">CraftyBoxes</a>
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link active">Shop</a>
+                <a href="./about.html" class="nav-link">About Us</a>
+                <a href="./testimonials.html" class="nav-link">Testimonials</a>
+                <a href="./faq.html" class="nav-link">FAQ</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="./cart.html" class="relative text-gray-700 hover:text-green-600">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                 <a href="./my-account.html" class="hidden md:block text-gray-700 hover:text-green-600">
+                    <i data-lucide="user"></i>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="./index.html" class="block nav-link text-center border-b">Home</a>
+            <a href="./shop.html" class="block nav-link text-center border-b active">Shop</a>
+            <a href="./about.html" class="block nav-link text-center border-b">About Us</a>
+            <a href="./testimonials.html" class="block nav-link text-center border-b">Testimonials</a>
+            <a href="./faq.html" class="block nav-link text-center border-b">FAQ</a>
+            <a href="./contact.html" class="block nav-link text-center border-b">Contact</a>
+            <a href="./my-account.html" class="block nav-link text-center">My Account</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 md:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- Left Side: Product Images -->
+            <div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-4">
+                    <img id="main-product-image" src="../Images/suraj-tomer-uVatepX54tc-unsplash.jpg" alt="The Pottery Starter Kit" class="w-full h-auto object-cover transition-all duration-300">
+                </div>
+                 <div class="grid grid-cols-4 gap-4">
+                    <div>
+                        <img src="../Images/suraj-tomer-uVatepX54tc-unsplash.jpg" data-large-src="../Images/suraj-tomer-uVatepX54tc-unsplash.jpg" alt="Thumbnail 1" class="thumbnail-img cursor-pointer border-2 border-green-500 rounded-lg">
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/150x150/fbcfe8/333333?text=Clay+and+Tools" data-large-src="https://placehold.co/600x600/fbcfe8/333333?text=Clay+and+Tools" alt="Thumbnail 2" class="thumbnail-img cursor-pointer border-2 border-transparent rounded-lg hover:border-green-300">
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/150x150/fbcfe8/333333?text=Paints" data-large-src="https://placehold.co/600x600/fbcfe8/333333?text=Paints" alt="Thumbnail 3" class="thumbnail-img cursor-pointer border-2 border-transparent rounded-lg hover:border-green-300">
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/150x150/fbcfe8/333333?text=Finished+Pot" data-large-src="https://placehold.co/600x600/fbcfe8/333333?text=Finished+Pot" alt="Thumbnail 4" class="thumbnail-img cursor-pointer border-2 border-transparent rounded-lg hover:border-green-300">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Product Details -->
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">The Pottery Starter Kit</h1>
+                <p id="product-price" class="text-3xl font-semibold text-green-600 mb-6">$55.00</p>
+                
+                <div class="space-y-6">
+                    <!-- Size Options -->
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-900 mb-2">Size</h3>
+                        <div class="flex space-x-3">
+                            <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase cursor-pointer focus:outline-none ring-2 ring-green-500">
+                                <input type="radio" name="size-choice" value="Standard" class="sr-only" checked>
+                                <p id="size-choice-0-label">Standard</p>
+                            </label>
+                            <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase cursor-pointer focus:outline-none">
+                                <input type="radio" name="size-choice" value="Large" class="sr-only">
+                                <p id="size-choice-1-label">Large</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Quantity and Add to Cart -->
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center border rounded-md">
+                            <button id="minus-btn" class="px-3 py-2 text-gray-500 hover:text-gray-700">-</button>
+                            <input id="quantity-input" type="text" value="1" class="w-12 text-center border-l border-r" readonly>
+                            <button id="plus-btn" class="px-3 py-2 text-gray-500 hover:text-gray-700">+</button>
+                        </div>
+                        <button class="primary-btn flex-1">Add to Cart</button>
+                    </div>
+
+                    <!-- Description -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Description</h3>
+                        <p class="text-gray-600">
+                            Get your hands dirty and unleash your inner sculptor with our Pottery Starter Kit. Perfect for a relaxing weekend project, this kit provides everything you need to create your own unique, hand-crafted pottery pieces from the comfort of your home. No kiln needed!
+                        </p>
+                    </div>
+
+                    <!-- What's in the box -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">What's in the box?</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Premium Air-Dry Clay (1kg)</li>
+                            <li>8-Piece Wooden Sculpting Tool Set</li>
+                            <li>Potter's Sponge for Smoothing</li>
+                            <li>Set of 6 Acrylic Paints & 2 Brushes</li>
+                            <li>Waterproof Sealant Varnish</li>
+                            <li>Step-by-Step Instruction Guide</li>
+                            <li class="font-semibold text-green-700">Large Box also includes: Extra 1kg of clay, 6 additional paint colors, and a mini sculpting turntable.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">CraftyBoxes</h3>
+                    <p class="text-gray-400">Your daily dose of creativity, delivered to your door.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="./shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Policies</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="./shipping-policy.html" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="./return-policy.html" class="text-gray-400 hover:text-white">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 CraftyBoxes. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        lucide.createIcons();
+
+        // --- Mobile Menu ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Product Page Logic ---
+        const sizeOptions = document.querySelectorAll('input[name="size-choice"]');
+        const priceElement = document.getElementById('product-price');
+        const prices = {
+            'Standard': 55.00,
+            'Large': 75.00
+        };
+
+        sizeOptions.forEach(radio => {
+            radio.addEventListener('change', (event) => {
+                const selectedSize = event.target.value;
+                priceElement.textContent = `$${prices[selectedSize].toFixed(2)}`;
+                
+                // Update styling for selected size
+                document.querySelectorAll('input[name="size-choice"] + p').forEach(p => {
+                    p.parentElement.classList.remove('ring-2', 'ring-green-500');
+                });
+                event.target.parentElement.classList.add('ring-2', 'ring-green-500');
+            });
+        });
+
+        // --- Quantity Selector ---
+        const quantityInput = document.getElementById('quantity-input');
+        const minusButton = document.getElementById('minus-btn');
+        const plusButton = document.getElementById('plus-btn');
+
+        minusButton.addEventListener('click', () => {
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        plusButton.addEventListener('click', () => {
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        });
+
+        // --- Product Image Gallery ---
+        const mainImage = document.getElementById('main-product-image');
+        const thumbnails = document.querySelectorAll('.thumbnail-img');
+
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // Set main image source from the data attribute
+                mainImage.src = thumb.dataset.largeSrc;
+
+                // Update active thumbnail border
+                thumbnails.forEach(t => {
+                    t.classList.remove('border-green-500');
+                    t.classList.add('border-transparent');
+                });
+                thumb.classList.remove('border-transparent');
+                thumb.classList.add('border-green-500');
+            });
+        });
+    });
+    </script>
+</body>
+</html>
