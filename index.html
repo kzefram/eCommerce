@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crafty Boxes - Your Creative Outlet. Unleash Your Creativity with Our DIY Craft Kits." />
+    <meta name="keywords" content="craft, boxes, creative, DIY, ecommerce, watercolor, painting, Watercolour, colligraphy, Pottery" />
+    <meta name="author" content="Bourgeois Website Development" />
+    
     <title>Crafty Boxes - Your Creative Outlet</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -87,17 +91,18 @@
       >
         <a href="#" class="text-2xl font-bold text-green-600">CraftyBoxes</a>
         <nav class="hidden md:flex items-center space-x-2">
-          <a href="index.html" class="nav-link active">Home</a>
-          <a href="./Pages/shop.html" class="nav-link">Shop</a>
-          <a href="./Pages/about.html" class="nav-link">About Us</a>
-          <a href="./Pages/Testimonials.html" class="nav-link">Testimonials</a>
-          <a href="./Pages/faq.html" class="nav-link">FAQ</a>
-          <a href="./Pages/contact.html" class="nav-link">Contact</a>
+          <a href="index.html" class="nav-link active" aria-label="Home">Home</a>
+          <a href="./Pages/shop.html" class="nav-link" aria-label="Shop">Shop</a>
+          <a href="./Pages/about.html" class="nav-link" aria-label="About Us">About Us</a>
+          <a href="./Pages/Testimonials.html" class="nav-link" aria-label="Testimonials">Testimonials</a>
+          <a href="./Pages/faq.html" class="nav-link" aria-label="FAQ">FAQ</a>
+          <a href="./Pages/contact.html" class="nav-link" aria-label="Contact">Contact</a>
         </nav>
         <div class="flex items-center space-x-4">
           <a
             href="./Pages/cart.html"
             class="relative text-gray-700 hover:text-green-600"
+            aria-label="View your shopping cart"
           >
             <i data-lucide="shopping-cart"></i>
             <span
@@ -109,6 +114,7 @@
           <a
             href="./Pages/myaccount.html"
             class="hidden md:block text-gray-700 hover:text-green-600"
+            aria-label="My Account"
           >
             <i data-lucide="user"></i>
           </a>
@@ -141,7 +147,7 @@
           class="block nav-link text-center border-b"
           >Contact</a
         >
-        <a href="#" class="block nav-link text-center">My Account</a>
+        <a href="./Pages/myaccount.html" class="block nav-link text-center">My Account</a>
       </div>
     </header>
 
@@ -154,19 +160,19 @@
           background-repeat: no-repeat;
         "
       >
-        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4" aria-label="Unbox Your Creativity">
           Unbox Your Creativity
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto" aria-label="Discover curated craft boxes filled with high-quality materials and endless inspiration. Perfect for hobbyists and aspiring artists alike.">
           Discover curated craft boxes filled with high-quality materials and
           endless inspiration. Perfect for hobbyists and aspiring artists alike.
         </p>
-        <a href="./Pages/shop.html" class="primary-btn">Explore Our Shop</a>
+        <a href="./Pages/shop.html" class="primary-btn" aria-label="Explore Our Shop">Explore Our Shop</a>
       </section>
 
       <!-- Featured Products -->
       <section class="mt-16">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8" aria-label="Our Bestsellers">
           Our Bestsellers
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -180,13 +186,14 @@
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
-              <h3 class="font-bold text-xl mb-2">The Watercolour Dream</h3>
-              <p class="text-gray-600 mb-4">
+              <h3 class="font-bold text-xl mb-2" aria-label="The Watercolour Dream">The Watercolour Dream</h3>
+              <p class="text-gray-600 mb-4" aria-label="Everything you need to paint beautiful watercolor landscapes.">
                 Everything you need to paint beautiful watercolor landscapes.
               </p>
               <a
                 href="./Pages/product1.html"
                 class="font-semibold text-green-600 hover:text-green-800"
+                aria-label="View details for The Watercolour Dream"
                 >View Details &rarr;</a
               >
             </div>
@@ -201,13 +208,14 @@
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
-              <h3 class="font-bold text-xl mb-2">The Pottery Starter Kit</h3>
-              <p class="text-gray-600 mb-4">
+              <h3 class="font-bold text-xl mb-2" aria-label="The Pottery Starter Kit">The Pottery Starter Kit</h3>
+              <p class="text-gray-600 mb-4" aria-label="Get your hands dirty and create unique ceramic pieces at home.">
                 Get your hands dirty and create unique ceramic pieces at home.
               </p>
               <a
                 href="./Pages/product2.html"
                 class="font-semibold text-green-600 hover:text-green-800"
+                aria-label="View details for The Pottery Starter Kit"
                 >View Details &rarr;</a
               >
             </div>
@@ -222,13 +230,14 @@
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
-              <h3 class="font-bold text-xl mb-2">The Calligraphy Collection</h3>
-              <p class="text-gray-600 mb-4">
+              <h3 class="font-bold text-xl mb-2" aria-label="The Calligraphy Collection">The Calligraphy Collection</h3>
+              <p class="text-gray-600 mb-4" aria-label="Master the art of beautiful handwriting with this elegant set.">
                 Master the art of beautiful handwriting with this elegant set.
               </p>
               <a
                 href="./Pages/product3.html"
                 class="font-semibold text-green-600 hover:text-green-800"
+                aria-label="View details for The Calligraphy Collection"
                 >View Details &rarr;</a
               >
             </div>
@@ -242,23 +251,22 @@
       <div class="container mx-auto px-6 py-10">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 class="text-xl font-bold text-green-400 mb-4">CraftyBoxes</h3>
-            <p class="text-gray-400">
+            <h3 class="text-xl font-bold text-green-400 mb-4" aria-label="CraftyBoxes">CraftyBoxes</h3>
+            <p class="text-gray-400" aria-label="Your daily dose of creativity, delivered to your door.">
               Your daily dose of creativity, delivered to your door.
             </p>
           </div>
           <div>
-            <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+            <h4 class="font-semibold text-lg mb-4" aria-label="Quick Links">Quick Links</h4>
             <ul class="space-y-2">
               <li>
-                <a href="./index.html" class="text-gray-400 hover:text-white"
-                  >Home</a
-                >
+                <a href="./index.html" class="text-gray-400 hover:text-white" aria-label="Home">Home</a>
               </li>
               <li>
                 <a
                   href="./Pages/shop.html"
                   class="text-gray-400 hover:text-white"
+                  aria-label="Shop"
                   >Shop</a
                 >
               </li>
@@ -266,6 +274,7 @@
                 <a
                   href="./Pages/about.html"
                   class="text-gray-400 hover:text-white"
+                  aria-label="About Us"
                   >About Us</a
                 >
               </li>
@@ -273,48 +282,52 @@
                 <a
                   href="./Pages/contact.html"
                   class="text-gray-400 hover:text-white"
+                  aria-label="Contact"
                   >Contact</a
                 >
               </li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold text-lg mb-4">Policies</h4>
+            <h4 class="font-semibold text-lg mb-4" aria-label="Policies">Policies</h4>
             <ul class="space-y-2">
               <li>
                 <a
-                  href="./Pages/privacy.html"
+                  href="./Pages/PrivacyPolicy.html"
                   class="text-gray-400 hover:text-white"
+                  aria-label="Privacy Policy"
                   >Privacy Policy</a
                 >
               </li>
               <li>
                 <a
-                  href="./Pages/shipping.html"
+                  href="./Pages/Shippingpolicy.html"
                   class="text-gray-400 hover:text-white"
+                  aria-label="Shipping Policy"
                   >Shipping Policy</a
                 >
               </li>
               <li>
                 <a
-                  href="./Pages/return.html"
+                  href="./Pages/returnspolicy.html"
                   class="text-gray-400 hover:text-white"
+                  aria-label="Return Policy"
                   >Return Policy</a
                 >
               </li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+            <h4 class="font-semibold text-lg mb-4" aria-label="Follow Us">Follow Us</h4>
             <div class="flex space-x-4">
               <a href="#" class="text-gray-400 hover:text-white"
-                ><i data-lucide="facebook"></i
+                ><i data-lucide="facebook" aria-label="Facebook"></i
               ></a>
               <a href="#" class="text-gray-400 hover:text-white"
-                ><i data-lucide="instagram"></i
+                ><i data-lucide="LinkedIn" aria-label="LinkedIn"></i
               ></a>
               <a href="#" class="text-gray-400 hover:text-white"
-                ><i data-lucide="twitter"></i
+                ><i data-lucide="Google" aria-label="Google"></i
               ></a>
             </div>
           </div>
@@ -322,7 +335,7 @@
         <div
           class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500"
         >
-          <p>
+          <p aria-label="Copyright Information">
             &copy; 2024 CraftyBoxes. All Rights Reserved. A Website by Bourgeois
             Website Development
           </p>

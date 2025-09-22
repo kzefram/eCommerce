@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crafty Boxes - Your Creative Outlet. Unleash Your Creativity with Our DIY Craft Kits." />
+    <meta name="keywords" content="craft, boxes, creative, DIY, ecommerce, watercolor, painting, Watercolour, colligraphy, Pottery" />
+    <meta name="author" content="Bourgeois Website Development" />
     <title>The Calligraphy Collection - Crafty Boxes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,21 +80,21 @@
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="./index.html" class="text-2xl font-bold text-green-600">CraftyBoxes</a>
+            <a href="./index.html" class="text-2xl font-bold text-green-600" aria-label="CraftyBoxes">CraftyBoxes</a>
             <nav class="hidden md:flex items-center space-x-2">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./shop.html" class="nav-link active">Shop</a>
-                <a href="./about.html" class="nav-link">About Us</a>
-                <a href="./testimonials.html" class="nav-link">Testimonials</a>
-                <a href="./faq.html" class="nav-link">FAQ</a>
-                <a href="./contact.html" class="nav-link">Contact</a>
+                <a href="./index.html" class="nav-link" aria-label="Home">Home</a>
+                <a href="./shop.html" class="nav-link active" aria-label="Shop">Shop</a>
+                <a href="./about.html" class="nav-link" aria-label="About Us">About Us</a>
+                <a href="./testimonials.html" class="nav-link" aria-label="Testimonials">Testimonials</a>
+                <a href="./faq.html" class="nav-link" aria-label="FAQ">FAQ</a>
+                <a href="./contact.html" class="nav-link" aria-label="Contact">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="./cart.html" class="relative text-gray-700 hover:text-green-600">
+                <a href="./cart.html" class="relative text-gray-700 hover:text-green-600" aria-label="Shopping Cart">
                     <i data-lucide="shopping-cart"></i>
                     <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                 </a>
-                 <a href="./my-account.html" class="hidden md:block text-gray-700 hover:text-green-600">
+                 <a href="./my-account.html" class="hidden md:block text-gray-700 hover:text-green-600" aria-label="My Account">
                     <i data-lucide="user"></i>
                 </a>
                 <button id="mobile-menu-button" class="md:hidden text-gray-700">
@@ -136,21 +139,21 @@
 
             <!-- Right Side: Product Details -->
             <div>
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">The Calligraphy Collection</h1>
-                <p id="product-price" class="text-3xl font-semibold text-green-600 mb-6">$40.00</p>
-                
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2" aria-label="The Calligraphy Collection">The Calligraphy Collection</h1>
+                <p id="product-price" class="text-3xl font-semibold text-green-600 mb-6" aria-label="$40.00">$40.00</p>
+
                 <div class="space-y-6">
                     <!-- Size Options -->
                     <div>
-                        <h3 class="text-sm font-medium text-gray-900 mb-2">Size</h3>
+                        <h3 class="text-sm font-medium text-gray-900 mb-2" aria-label="Size Options" >Size</h3>
                         <div class="flex space-x-3">
-                            <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase cursor-pointer focus:outline-none ring-2 ring-green-500">
+                            <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase cursor-pointer focus:outline-none ring-2 ring-green-500" aria-labelledby="size-choice-0-label">
                                 <input type="radio" name="size-choice" value="Standard" class="sr-only" checked>
-                                <p id="size-choice-0-label">Standard</p>
+                                <p id="size-choice-0-label" aria-label="Standard">Standard</p>
                             </label>
-                            <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase cursor-pointer focus:outline-none">
+                            <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase cursor-pointer focus:outline-none" aria-labelledby="size-choice-1-label">
                                 <input type="radio" name="size-choice" value="Large" class="sr-only">
-                                <p id="size-choice-1-label">Large</p>
+                                <p id="size-choice-1-label" aria-label="Large">Large</p>
                             </label>
                         </div>
                     </div>
@@ -162,27 +165,27 @@
                             <input id="quantity-input" type="text" value="1" class="w-12 text-center border-l border-r" readonly>
                             <button id="plus-btn" class="px-3 py-2 text-gray-500 hover:text-gray-700">+</button>
                         </div>
-                        <button class="primary-btn flex-1">Add to Cart</button>
+                        <button class="primary-btn flex-1" aria-label="Add to Cart">Add to Cart</button>
                     </div>
 
                     <!-- Description -->
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Description</h3>
-                        <p class="text-gray-600">
+                        <h3 class="font-bold text-lg mb-2" aria-label="Product Description">Description</h3>
+                        <p class="text-gray-600" aria-label="Discover the timeless art of beautiful writing with our Calligraphy Collection. This curated kit is designed for beginners and enthusiasts alike, providing all the essential tools you need to learn and practice elegant lettering and create stunning written works of art." aria-label="Discover the timeless art of beautiful writing with our Calligraphy Collection. This curated kit is designed for beginners and enthusiasts alike, providing all the essential tools you need to learn and practice elegant lettering and create stunning written works of art.">
                            Discover the timeless art of beautiful writing with our Calligraphy Collection. This curated kit is designed for beginners and enthusiasts alike, providing all the essential tools you need to learn and practice elegant lettering and create stunning written works of art.
                         </p>
                     </div>
 
                     <!-- What's in the box -->
                     <div>
-                        <h3 class="font-bold text-lg mb-2">What's in the box?</h3>
+                        <h3 class="font-bold text-lg mb-2" aria-label="What's in the box?">What's in the box?</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-1">
-                            <li>Classic Black Oblique Pen Holder</li>
-                            <li>Assortment of 3 Pointed Nibs</li>
-                            <li>Bottle of Black Sumi Ink</li>
-                            <li>High-Quality Practice Pad with Guidelines</li>
-                            <li>Instructional Booklet on Basic Strokes</li>
-                            <li>Set of 5 Ivory Note Cards & Envelopes</li>
+                            <li aria-label="Classic Black Oblique Pen Holder">Classic Black Oblique Pen Holder</li>
+                            <li aria-label="Assortment of 3 Pointed Nibs">Assortment of 3 Pointed Nibs</li>
+                            <li aria-label="Bottle of Black Sumi Ink">Bottle of Black Sumi Ink</li>
+                            <li aria-label="High-Quality Practice Pad with Guidelines">High-Quality Practice Pad with Guidelines</li>
+                            <li aria-label="Instructional Booklet on Basic Strokes">Instructional Booklet on Basic Strokes</li>
+                            <li aria-label="Set of 5 Ivory Note Cards & Envelopes">Set of 5 Ivory Note Cards & Envelopes</li>
                             <li class="font-semibold text-green-700">Large Box also includes: Walnut straight pen holder, a bottle of gold ink, and premium vellum paper.</li>
                         </ul>
                     </div>
@@ -196,37 +199,37 @@
         <div class="container mx-auto px-6 py-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold text-green-400 mb-4">CraftyBoxes</h3>
-                    <p class="text-gray-400">Your daily dose of creativity, delivered to your door.</p>
+                    <h3 class="text-xl font-bold text-green-400 mb-4" aria-label="CraftyBoxes">CraftyBoxes</h3>
+                    <p class="text-gray-400" aria-label="Your daily dose of creativity, delivered to your door.">Your daily dose of creativity, delivered to your door.</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <h4 class="font-semibold text-lg mb-4" aria-label="Quick Links">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="./index.html" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="./shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
-                        <li><a href="./about.html" class="text-gray-400 hover:text-white">About Us</a></li>
-                        <li><a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white" aria-label="Home">Home</a></li>
+                        <li><a href="./shop.html" class="text-gray-400 hover:text-white" aria-label="Shop">Shop</a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white" aria-label="About Us">About Us</a></li>
+                        <li><a href="./contact.html" class="text-gray-400 hover:text-white" aria-label="Contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Policies</h4>
+                    <h4 class="font-semibold text-lg mb-4" aria-label="Policies">Policies</h4>
                     <ul class="space-y-2">
-                        <li><a href="./privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="./shipping-policy.html" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
-                        <li><a href="./return-policy.html" class="text-gray-400 hover:text-white">Return Policy</a></li>
+                        <li><a href="./PrivacyPolicy.html" class="text-gray-400 hover:text-white" aria-label="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="./Shippingpolicy.html" class="text-gray-400 hover:text-white" aria-label="Shipping Policy">Shipping Policy</a></li>
+                        <li><a href="./returnspolicy.html" class="text-gray-400 hover:text-white" aria-label="Return Policy">Return Policy</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <h4 class="font-semibold text-lg mb-4" aria-label="Follow Us">Follow Us</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter"><i data-lucide="twitter"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
-                <p>&copy; 2024 CraftyBoxes. All Rights Reserved.</p>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500" aria-label="Copyright Information">
+                <p>&copy; 2024 CraftyBoxes. All Rights Reserved. A website by Bourgeois Website Development</p>
             </div>
         </div>
     </footer>
